@@ -55,8 +55,11 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         export PATH=$GITHUB_WORKSPACE/kernel_workspace/toolchains/clang-crepuscular/bin:$PATH
-        chmod 777 ./build.sh
-        ./build.sh all
+    #    chmod 777 ./build.sh
+    #   ./build.sh all
+    - name: Debugging with tmate 远程调试 手动运行构建脚本
+      uses: mxschmitt/action-tmate@v3.14
+
     - name: Make Anykernel for your kernel 生成AnyKernel.zip
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
