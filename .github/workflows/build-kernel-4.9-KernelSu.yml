@@ -1,9 +1,9 @@
-name: Build Kernel
+name: Build Kernel with KernelSu
 on:
   workflow_dispatch:
      inputs:
       KERNEL_SOURCE:
-        description: 'Kernel Source with KernelSu'
+        description: 'Kernel Source'
         required: true
         default: 'https://github.com/Three-taile-dragon/android_kernel_oneplus_sdm845-mcd'
       KERNEL_SOURCE_BRANCH:
