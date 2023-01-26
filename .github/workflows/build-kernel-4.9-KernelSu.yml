@@ -47,7 +47,7 @@ jobs:
     - name: Setup KernelSU 初始化KernelSU配置
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
-        curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
+        curl -LSs "https://raw.githubusercontent.com/Three-taile-dragon/KernelSU/dev/kernel/setup.sh" | bash -
         echo "CONFIG_KPROBES=y" >> ${{ github.event.inputs.KERNEL_DEFCONFIG_PATH }}
         echo "CONFIG_HAVE_KPROBES=y" >> ${{ github.event.inputs.KERNEL_DEFCONFIG_PATH }}
         echo "CONFIG_KPROBE_EVENTS=y" >> ${{ github.event.inputs.KERNEL_DEFCONFIG_PATH }}
